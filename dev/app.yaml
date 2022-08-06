@@ -7,7 +7,7 @@ metadata:
 spec:
   selector:
     app: app-one
-  type: nodePort
+  type: NodePort
   ports:
     - protocol: TCP
       name: http
