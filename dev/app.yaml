@@ -12,7 +12,7 @@ spec:
     - protocol: TCP
       name: http
       port: 80
-      targetPort: 8080
+      targetPort: 8888
       nodePort: 30007
 
 ---
@@ -40,7 +40,7 @@ spec:
               value: Hello world from app1
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 8888
           startupProbe:
             httpGet:
               path: /
@@ -50,7 +50,7 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: 8080
+              port: 8888
             failureThreshold: 1
             periodSeconds: 10
           resources:
