@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: app-one
+  name: playground
   labels:
-    app: app-one
+    app: playground
 spec:
   selector:
-    app: app-one
+    app: playground
   type: NodePort
   ports:
     - protocol: TCP
@@ -20,20 +20,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-one
+  name: playground
   labels:
-    app: app-one
+    app: playground
 spec:
   selector:
     matchLabels:
-      app: app-one
+      app: playground
   template:
     metadata:
       labels:
-        app: app-one
+        app: playground
     spec:
       containers:
-        - name: app-one
+        - name: playground
           image: wil42/playground:v1
           env:
             - name: MESSAGE
