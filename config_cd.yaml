@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/maxime-42/iot_p3.git
+    repoURL: https://github.com/maxime-42/iot-p3-mkayumba.git
     targetRevision: HEAD
     path: dev
   destination: 
